@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal Day ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #ffd1dc, #ff9aa2);
+    font-family: 'Great Vibes', cursive;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/* ===== CLOSED LETTER ===== */
+.letter-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: jitter 0.15s infinite;
+    cursor: pointer;
+}
+
+@keyframes jitter {
+    0% { transform: translate(-50%, -50%) rotate(-1deg); }
+    50% { transform: translate(-50%, -50%) rotate(1deg); }
+    100% { transform: translate(-50%, -50%) rotate(-1deg); }
+}
+
+.closed-letter {
+    width: 320px;
+    height: 220px;
+    background: linear-gradient(135deg, #e91e63, #ad1457);
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+    position: relative;
+}
+
+.closed-letter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(135deg, #f8bbd0, #e91e63);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.open-text {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    color: white;
+    font-size: 1.4em;
+}
+
+/* ===== LETTER CONTAINER ===== */
+.container {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 35px;
+    background: rgba(255,255,255,0.97);
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: scale(0.4) translateY(100px);
+    transition: all 1.2s ease;
+    display: none;
+}
+
+.container.show {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    display: block;
+}
+
+h1 {
+    font-size: 3em;
+    color: #e91e63;
+}
+
+/* 💖 MORE ROMANTIC LETTER FONT */
+.letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25em;
+    line-height: 1.8;
+    text-align: left;
+    padding: 30px;
+    border-radius: 18px;
+    border: 2px solid #e91e63;
+    box-shadow: inset 0 0 18px rgba(233,30,99,0.2);
+}
+
+/* ===== YES BUTTON ===== */
+.button {
+    margin-top: 30px;
+    padding: 14px 40px;
+    font-size: 1.4em;
+    border-radius: 40px;
+    border: none;
+    background: linear-gradient(135deg, #e91e63, #ad1457);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(233,30,99,0.45);
+    transition: transform 0.3s;
+}
+.button:hover { transform: scale(1.1); }
+
+/* ===== YAY POPUP ===== */
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.popup.show {
+    display: flex;
+}
+
+.popup-card {
+    background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+    padding: 45px;
+    border-radius: 25px;
+    text-align: center;
+    animation: pop 0.6s ease;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+@keyframes pop {
+    0% { transform: scale(0.4); opacity: 0; }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.popup-card h2 {
+    font-size: 3em;
+    color: #e91e63;
+}
+
+.popup-card p {
+    font-size: 1.4em;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* FLOATING EMOJIS */
+.float {
+    position: absolute;
+    animation: floatUp linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(100vh); opacity: 1; }
+    to { transform: translateY(-150px); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- CLOSED LETTER -->
+<div class="letter-wrapper" id="openLetter">
+    <div class="closed-letter">
+        <div class="open-text">Click to open my heart 💌</div>
+    </div>
+</div>
+
+<!-- LETTER -->
+<div class="container" id="container">
+<h1>Happy Proposal Day! ❤️</h1>
+
+<div class="letter">
+<!-- 🔒 LETTER TEXT — UNCHANGED -->
+<p>From the moment you walked into my life, everything changed.<br>
+Life jo pehle normal si lagti thi, suddenly rangon se bhar gayi.<br>
+You’re not just someone I love — tum woh ho jo mujhe complete karti ho.<br>
+The one I want to wake up with, grow with, and choose every single day.</p>
+
+<p>Every thought, every minute… somehow tumhara khayal aa hi jaata hai.<br>
+Kaam karte hue, gym mein, gaana sunte hue, dance karte hue —<br>
+jab bhi koi song bajta hai, I don’t imagine myself… I imagine us.<br>
+Bilkul waise hi, jaise filmon mein hota hai — ho raha hai hoobahoo.</p>
+
+<p>Pehle mujhe lagta tha life ka matlab freedom hai, I was single, wanted to explore everything.<br>
+But ever since you entered my life,<br>
+I still want to complete all my dreams, explore everything, but with you<br>
+Travel karna ho, grow karna ho, being rich, being healthy —<br>
+sab kuch tumhare saath.</p>
+
+<p>Hasn't been a lot of time us being together, phir bhi tumhare saath main khud ko sabse zyada open, sabse zyada real mehsoos karta hoon.<br>
+You feel like home — safe, warm, apni si.<br>
+Jithe shantata aahe, tithe tu aahe.</p>
+
+<p>Will you be mine — for all the tomorrows? ❤️</p>
+</div>
+
+<button class="button" onclick="showPopup()">Click Here to Say Yes</button>
+</div>
+
+<!-- 💖 POPUP -->
+<div class="popup" id="popup">
+<div class="popup-card">
+    <h2>YAYYYYY!!! 💖💋</h2>
+    <p>I’m soooo happy!  
+    My heart is dancing right now 🥹❤️  
+    This is our forever.</p>
+</div>
+</div>
+
+<script>
+// OPEN LETTER
+openLetter.onclick = () => {
+    openLetter.style.display = 'none';
+    container.classList.add('show');
+};
+
+// SHOW POPUP
+function showPopup() {
+    popup.classList.add('show');
+    for (let i = 0; i < 25; i++) spawnFloat();
+}
+
+// FLOATING HEARTS & KISSES
+const emojis = ['❤️','💖','💋','😘','💕'];
+
+function spawnFloat() {
+    const e = document.createElement('div');
+    e.className = 'float';
+    e.innerText = emojis[Math.floor(Math.random()*emojis.length)];
+    e.style.left = Math.random()*100 + 'vw';
+    e.style.fontSize = (Math.random()*1.5 + 1.2) + 'em';
+    e.style.animationDuration = (Math.random()*3 + 4) + 's';
+    document.body.appendChild(e);
+    setTimeout(() => e.remove(), 7000);
+}
+</script>
+
+</body>
+</html>
